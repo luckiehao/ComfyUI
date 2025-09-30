@@ -68,6 +68,11 @@ class SymlinkManager:
                 else:
                     skipped_items.append(target_dir)
             else:
+                # Even if top-level directory exists, try deep linking for new files
+                if share_path.exists() and project_path.exists():
+                    self.logger.debug(f"Top-level directory {target_dir} exists, trying deep linking for new files")
+                    additional_links = self._create_deep_symlinks_for_existing_directory(share_path, project_path)
+                    created_links.extend(additional_links)
                 skipped_items.append(target_dir)
         
         if created_links:
@@ -223,18 +228,18 @@ class SymlinkManager:
                 project_base.mkdir(parents=True, exist_ok=True)
             
             # Recursively scan and create symlinks for files and subdirectories
-            deep_links.extend(self._scan_and_link_directory(share_base, project_base))
+            deep_links.extend(self._scan_and_link_directory(share_base, project_base, 0))
         
         return deep_links
     
-    def _scan_and_link_directory(self, share_path: Path, project_path: Path) -> List[str]:
+    def _create_deep_symlinks_for_existing_directory(self, share_path: Path, project_path: Path) -> List[str]:
         """
-        Recursively scan a directory and create symlinks for files and subdirectories
-        Prioritizes individual files over directory symlinks
+        Create symlinks for files and subdirectories in an existing directory
+        Only creates symlinks for items that don't already exist in the project
         
         Args:
             share_path: Source directory in /share/
-            project_path: Target directory in project
+            project_path: Target directory in project (already exists)
             
         Returns:
             List of created symlinks
@@ -242,6 +247,30 @@ class SymlinkManager:
         created_links = []
         
         try:
+            # Recursively scan and create symlinks for new files and subdirectories
+            created_links.extend(self._scan_and_link_directory(share_path, project_path, 0))
+        except Exception as e:
+            self.logger.error(f"Error creating deep symlinks for existing directory {project_path}: {e}")
+        
+        return created_links
+    
+    def _scan_and_link_directory(self, share_path: Path, project_path: Path, depth: int = 0) -> List[str]:
+        """
+        Recursively scan a directory and create symlinks for files and subdirectories
+        Prioritizes individual files over directory symlinks
+        
+        Args:
+            share_path: Source directory in /share/
+            project_path: Target directory in project
+            depth: Current recursion depth (0-based)
+            
+        Returns:
+            List of created symlinks
+        """
+        created_links = []
+        
+        try:
+            
             # First, collect all items
             items = list(share_path.iterdir())
             
@@ -282,7 +311,7 @@ class SymlinkManager:
                 if has_files:
                     # Create directory and link files individually
                     project_item.mkdir(parents=True, exist_ok=True)
-                    created_links.extend(self._scan_and_link_directory(share_item, project_item))
+                    created_links.extend(self._scan_and_link_directory(share_item, project_item, depth + 1))
                 else:
                     # Create directory symlink
                     if self._create_symlink(share_item, project_item):
