@@ -59,7 +59,9 @@ class SymlinkManager:
             
             # Skip if we already processed this directory with deep linking
             if project_path.exists() and not project_path.is_symlink():
-                self.logger.debug(f"Skipping top-level symlink for {target_dir} (already processed with deep linking)")
+                self.logger.debug(f"Top-level directory {target_dir} exists, trying deep linking for new files")
+                additional_links = self._create_deep_symlinks_for_existing_directory(share_path, project_path)
+                created_links.extend(additional_links)
                 continue
                 
             if self._should_create_symlink(share_path, project_path):
@@ -300,9 +302,12 @@ class SymlinkManager:
                 share_item = share_path / dir_item.name
                 project_item = project_path / dir_item.name
                 
-                # Skip if target already exists
+                # If target already exists, continue scanning for new files
                 if project_item.exists():
-                    self.logger.debug(f"Skipping {project_item} (already exists)")
+                    self.logger.debug(f"Target {project_item} already exists, scanning for new files")
+                    # Continue scanning for new files in existing directory
+                    if share_item.is_dir():
+                        created_links.extend(self._scan_and_link_directory(share_item, project_item, depth + 1))
                     continue
                 
                 # Check if directory has files that should be linked individually
