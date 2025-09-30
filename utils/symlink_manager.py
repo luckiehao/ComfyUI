@@ -36,52 +36,40 @@ class SymlinkManager:
     def create_symlinks(self) -> None:
         """
         Create symbolic links from /share/ directory to ComfyUI project directories
-        Supports both top-level directory symlinks and deep file/directory symlinks
-        Skips if target already exists in project
+        Incremental sync: Create directories and symlinks for all files that don't exist in ComfyUI
         """
         if not self.share_directory.exists():
             self.logger.warning(f"Share directory {self.share_directory} does not exist, skipping symlink creation")
             return
         
-        self.logger.info(f"Checking for directories to link from {self.share_directory} to {self.project_root}")
+        self.logger.info(f"Starting incremental sync from {self.share_directory} to {self.project_root}")
         
         created_links = []
+        created_directories = []
         skipped_items = []
         
-        # First, try to create deep symlinks for files and subdirectories
-        deep_links = self._create_deep_symlinks()
-        created_links.extend(deep_links)
-        
-        # Then, create top-level directory symlinks for directories that weren't processed
         for target_dir in self.target_directories:
             share_path = self.share_directory / target_dir
             project_path = self.project_root / target_dir
             
-            # Skip if we already processed this directory with deep linking
-            if project_path.exists() and not project_path.is_symlink():
-                self.logger.debug(f"Top-level directory {target_dir} exists, trying deep linking for new files")
-                additional_links = self._create_deep_symlinks_for_existing_directory(share_path, project_path)
-                created_links.extend(additional_links)
-                continue
-                
-            if self._should_create_symlink(share_path, project_path):
-                if self._create_symlink(share_path, project_path):
-                    created_links.append(target_dir)
-                else:
-                    skipped_items.append(target_dir)
-            else:
-                # Even if top-level directory exists, try deep linking for new files
-                if share_path.exists() and project_path.exists():
-                    self.logger.debug(f"Top-level directory {target_dir} exists, trying deep linking for new files")
-                    additional_links = self._create_deep_symlinks_for_existing_directory(share_path, project_path)
-                    created_links.extend(additional_links)
+            if not share_path.exists():
+                self.logger.debug(f"Source {share_path} does not exist in share directory")
                 skipped_items.append(target_dir)
+                continue
+            
+            # Recursively sync the directory structure
+            sync_result = self._sync_directory_recursive(share_path, project_path)
+            created_links.extend(sync_result['links'])
+            created_directories.extend(sync_result['directories'])
+        
+        if created_directories:
+            self.logger.info(f"Successfully created directories: {', '.join(created_directories)}")
         
         if created_links:
             self.logger.info(f"Successfully created symlinks for: {', '.join(created_links)}")
         
         if skipped_items:
-            self.logger.info(f"Skipped items (already exist or not found in share): {', '.join(skipped_items)}")
+            self.logger.info(f"Skipped items (not found in share): {', '.join(skipped_items)}")
     
     def _should_create_symlink(self, share_path: Path, project_path: Path) -> bool:
         """
@@ -105,6 +93,52 @@ class SymlinkManager:
             return False
         
         return True
+    
+    def _sync_directory_recursive(self, share_path: Path, project_path: Path) -> dict:
+        """
+        Recursively sync directory structure from share to project
+        Creates directories and symlinks for all files that don't exist in project
+        
+        Args:
+            share_path: Source directory in /share/
+            project_path: Target directory in project
+            
+        Returns:
+            Dictionary with 'links' and 'directories' lists
+        """
+        result = {'links': [], 'directories': []}
+        
+        try:
+            # Ensure target directory exists
+            if not project_path.exists():
+                project_path.mkdir(parents=True, exist_ok=True)
+                result['directories'].append(str(project_path.relative_to(self.project_root)))
+                self.logger.debug(f"Created directory: {project_path}")
+            
+            # Process all items in the share directory
+            for item in share_path.iterdir():
+                share_item = share_path / item.name
+                project_item = project_path / item.name
+                
+                if item.is_file():
+                    # For files, create symlink if it doesn't exist
+                    if not project_item.exists():
+                        if self._create_symlink(share_item, project_item):
+                            result['links'].append(str(project_item.relative_to(self.project_root)))
+                            self.logger.debug(f"Created file symlink: {project_item} -> {share_item}")
+                    else:
+                        self.logger.debug(f"File {project_item} already exists, skipping")
+                        
+                elif item.is_dir():
+                    # For directories, recursively sync
+                    sub_result = self._sync_directory_recursive(share_item, project_item)
+                    result['links'].extend(sub_result['links'])
+                    result['directories'].extend(sub_result['directories'])
+                    
+        except Exception as e:
+            self.logger.error(f"Error syncing directory {share_path}: {e}")
+        
+        return result
     
     def _create_symlink(self, source_path: Path, target_path: Path) -> bool:
         """
