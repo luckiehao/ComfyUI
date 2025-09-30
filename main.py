@@ -14,6 +14,7 @@ import sys
 from comfy_execution.progress import get_progress_state
 from comfy_execution.utils import get_executing_context
 from comfy_api import feature_flags
+from utils.symlink_manager import setup_share_symlinks
 
 if __name__ == "__main__":
     #NOTE: These do not do anything on core ComfyUI, they are for custom nodes.
@@ -101,6 +102,18 @@ def execute_prestartup_script():
         logging.info("")
 
 apply_custom_paths()
+
+# Setup symlinks from /share/ directory
+def setup_share_directory_symlinks():
+    """Setup symbolic links from /share/ directory to ComfyUI project directories"""
+    try:
+        project_root = os.path.dirname(os.path.realpath(__file__))
+        setup_share_symlinks(project_root)
+        logging.info("Share directory symlinks setup completed")
+    except Exception as e:
+        logging.error(f"Failed to setup share directory symlinks: {e}")
+
+setup_share_directory_symlinks()
 execute_prestartup_script()
 
 
