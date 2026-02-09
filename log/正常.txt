@@ -1,0 +1,135 @@
+2026-02-09 16:18:27 - INFO - Requested to load WAN21
+2026-02-09 16:18:37 - INFO - loaded completely; 17024.33 MB usable, 13851.82 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:29<00:00, 14.66s/it]
+Restoring initial comfy attention
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = False
+2026-02-09 16:19:11 - INFO - Found quantization metadata version 1
+2026-02-09 16:19:11 - INFO - Detected mixed precision quantization
+2026-02-09 16:19:11 - INFO - Using mixed precision operations
+2026-02-09 16:19:11 - INFO - model weight dtype torch.float16, manual cast: torch.float16
+2026-02-09 16:19:11 - INFO - model_type FLOW
+2026-02-09 16:19:11 - INFO - Requested to load WAN21
+2026-02-09 16:19:18 - INFO - loaded completely; 17022.33 MB usable, 13852.99 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+ 25%|█████████████████████████████████████████▌                                                                                                                            | 1/4 [00:12<00:37, 12.65s/it]
+2026-02-09 16:19:38 - INFO - got prompt
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [01:02<00:00, 15.58s/it]
+Restoring initial comfy attention
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = False
+2026-02-09 16:20:24 - INFO - Requested to load WanVAE
+2026-02-09 16:20:25 - INFO - loaded completely; 4798.29 MB usable, 242.03 MB loaded, full load: True
+2026-02-09 16:20:39 - INFO - Prompt executed in 140.96 seconds
+2026-02-09 16:20:39 - INFO - Requested to load WanTEModel
+2026-02-09 16:20:43 - INFO - loaded completely; 30139.11 MB usable, 10835.48 MB loaded, full load: True
+2026-02-09 16:20:43 - INFO - Requested to load WanVAE
+2026-02-09 16:20:43 - INFO - loaded completely; 9575.96 MB usable, 242.03 MB loaded, full load: True
+2026-02-09 16:20:48 - INFO - Requested to load WAN21
+2026-02-09 16:20:56 - INFO - loaded completely; 17022.33 MB usable, 13851.82 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:29<00:00, 14.74s/it]
+Restoring initial comfy attention
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = False
+2026-02-09 16:21:30 - INFO - Requested to load WAN21
+2026-02-09 16:21:35 - INFO - loaded completely; 17022.33 MB usable, 13852.99 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [01:02<00:00, 15.65s/it]
+2026-02-09 16:22:38 - INFO - got prompt
+Restoring initial comfy attention
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = False
+2026-02-09 16:22:42 - INFO - Requested to load WanVAE
+2026-02-09 16:22:42 - INFO - loaded completely; 4798.29 MB usable, 242.03 MB loaded, full load: True
+2026-02-09 16:22:54 - INFO - Prompt executed in 135.53 seconds
+2026-02-09 16:22:55 - INFO - Requested to load WanTEModel
+2026-02-09 16:22:59 - INFO - loaded completely; 30139.11 MB usable, 10835.48 MB loaded, full load: True
+2026-02-09 16:22:59 - INFO - Requested to load WanVAE
+2026-02-09 16:22:59 - INFO - loaded completely; 9575.96 MB usable, 242.03 MB loaded, full load: True
+2026-02-09 16:23:04 - INFO - Requested to load WAN21
+2026-02-09 16:23:12 - INFO - loaded completely; 17022.33 MB usable, 13851.82 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:29<00:00, 14.76s/it]
+Restoring initial comfy attention
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = False
+2026-02-09 16:23:46 - INFO - Requested to load WAN21
+2026-02-09 16:23:50 - INFO - loaded completely; 17022.33 MB usable, 13852.99 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [01:02<00:00, 15.67s/it]
+Restoring initial comfy attention
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = False
+2026-02-09 16:24:56 - INFO - Requested to load WanVAE
+2026-02-09 16:24:57 - INFO - loaded completely; 4798.29 MB usable, 242.03 MB loaded, full load: True
+2026-02-09 16:25:09 - INFO - Prompt executed in 134.49 seconds
+2026-02-09 16:25:12 - INFO - got prompt
+2026-02-09 16:25:12 - INFO - Requested to load WanTEModel
+2026-02-09 16:25:16 - INFO - loaded completely; 30139.11 MB usable, 10835.48 MB loaded, full load: True
+2026-02-09 16:25:16 - INFO - Requested to load WanVAE
+2026-02-09 16:25:16 - INFO - loaded completely; 9575.96 MB usable, 242.03 MB loaded, full load: True
+2026-02-09 16:25:21 - INFO - Requested to load WAN21
+2026-02-09 16:25:29 - INFO - loaded completely; 17022.33 MB usable, 13851.82 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+ 50%|███████████████████████████████████████████████████████████████████████████████████                                                                                   | 1/2 [00:12<00:12, 12.89s/it]
+2026-02-09 16:25:47 - INFO - got prompt
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:29<00:00, 14.77s/it]
+Restoring initial comfy attention
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = False
+2026-02-09 16:26:03 - INFO - Requested to load WAN21
+2026-02-09 16:26:06 - INFO - loaded completely; 17022.33 MB usable, 13852.99 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [01:02<00:00, 15.71s/it]
+Restoring initial comfy attention
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = False
+2026-02-09 16:27:13 - INFO - Requested to load WanVAE
+2026-02-09 16:27:13 - INFO - loaded completely; 4798.29 MB usable, 242.03 MB loaded, full load: True
+2026-02-09 16:27:26 - INFO - Prompt executed in 134.31 seconds
+2026-02-09 16:27:27 - INFO - Requested to load WanTEModel
+2026-02-09 16:27:29 - INFO - got prompt
+2026-02-09 16:27:30 - INFO - loaded completely; 30139.11 MB usable, 10835.48 MB loaded, full load: True
+2026-02-09 16:27:31 - INFO - Requested to load WanVAE
+2026-02-09 16:27:31 - INFO - loaded completely; 9575.96 MB usable, 242.03 MB loaded, full load: True
+2026-02-09 16:27:35 - INFO - Requested to load WAN21
+2026-02-09 16:27:44 - INFO - loaded completely; 17022.33 MB usable, 13851.82 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:29<00:00, 14.83s/it]
+Restoring initial comfy attention
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = False
+2026-02-09 16:28:17 - INFO - Requested to load WAN21
+2026-02-09 16:28:21 - INFO - loaded completely; 17022.33 MB usable, 13852.99 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [01:03<00:00, 15.76s/it]
+Restoring initial comfy attention
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = False
+2026-02-09 16:29:28 - INFO - Requested to load WanVAE
+2026-02-09 16:29:28 - INFO - loaded completely; 4798.29 MB usable, 242.03 MB loaded, full load: True
+2026-02-09 16:29:41 - INFO - Prompt executed in 134.93 seconds
+2026-02-09 16:29:42 - INFO - Requested to load WanTEModel
+2026-02-09 16:29:46 - INFO - loaded completely; 30139.11 MB usable, 10835.48 MB loaded, full load: True
+2026-02-09 16:29:46 - INFO - Requested to load WanVAE
+2026-02-09 16:29:46 - INFO - loaded completely; 9575.96 MB usable, 242.03 MB loaded, full load: True
+2026-02-09 16:29:51 - INFO - Requested to load WAN21
+2026-02-09 16:29:59 - INFO - loaded completely; 17022.33 MB usable, 13851.82 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:29<00:00, 14.83s/it]
+Restoring initial comfy attention
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = False
+2026-02-09 16:30:33 - INFO - Requested to load WAN21
+2026-02-09 16:30:37 - INFO - loaded completely; 17022.33 MB usable, 13852.99 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [01:03<00:00, 15.76s/it]
+Restoring initial comfy attention
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = False
+2026-02-09 16:31:44 - INFO - Requested to load WanVAE
+2026-02-09 16:31:44 - INFO - loaded completely; 4798.29 MB usable, 242.03 MB loaded, full load: True
+2026-02-09 16:31:58 - INFO - Prompt executed in 136.24 seconds
+

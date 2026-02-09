@@ -1,0 +1,714 @@
+root@vigilant-nova-3431-5b7bd8dfcd-dr5n8:~/ComfyUI# /root/miniconda3/envs/py311/bin/python /root/ComfyUI/main.py --port 5090 --listen 0.0.0.0 --log-timestamp
+
+[START] Security scan
+[DONE] Security scan
+## ComfyUI-Manager: installing dependencies done.
+** ComfyUI startup time: 2026-02-09 16:12:37.753
+** Platform: Linux
+** Python version: 3.11.14 (main, Oct 21 2025, 18:31:21) [GCC 11.2.0]
+** Python executable: /root/miniconda3/envs/py311/bin/python
+** ComfyUI Path: /root/ComfyUI
+** ComfyUI Base Folder Path: /root/ComfyUI
+** User directory: /root/ComfyUI/user
+** ComfyUI-Manager config path: /root/ComfyUI/user/default/ComfyUI-Manager/config.ini
+** Log path: /root/ComfyUI/user/comfyui.log
+2026-02-09 16:12:38 - INFO -
+Prestartup times for custom nodes:
+2026-02-09 16:12:38 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/rgthree-comfy
+2026-02-09 16:12:38 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/comfyui-easy-use
+2026-02-09 16:12:38 - INFO -    1.7 seconds: /root/ComfyUI/custom_nodes/ComfyUI-Manager
+2026-02-09 16:12:38 - INFO -
+/root/miniconda3/envs/py311/lib/python3.11/site-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml d
+irectly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+2026-02-09 16:12:39 - INFO - Checkpoint files will always be loaded safely.
+2026-02-09 16:12:39 - INFO - Total VRAM 32112 MB, total RAM 515630 MB
+2026-02-09 16:12:39 - INFO - pytorch version: 2.8.0+cu128
+2026-02-09 16:12:39 - INFO - Set vram state to: NORMAL_VRAM
+2026-02-09 16:12:39 - INFO - Device: cuda:0 NVIDIA GeForce RTX 5090 : cudaMallocAsync
+2026-02-09 16:12:39 - INFO - Using async weight offloading with 2 streams
+2026-02-09 16:12:39 - INFO - Enabled pinned memory 489848.0
+2026-02-09 16:12:40 - WARNING - WARNING: You need pytorch with cu130 or higher to use optimized CUDA operations.
+2026-02-09 16:12:40 - INFO - Found comfy_kitchen backend eager: {'available': True, 'disabled': False, 'unavailable_reason': None, 'capabilities': ['apply_rope', 'apply_rope1', 'dequantize_nvfp4', 'deq
+uantize_per_tensor_fp8', 'quantize_nvfp4', 'quantize_per_tensor_fp8', 'scaled_mm_nvfp4']}
+2026-02-09 16:12:40 - INFO - Found comfy_kitchen backend cuda: {'available': True, 'disabled': True, 'unavailable_reason': None, 'capabilities': ['apply_rope', 'apply_rope1', 'dequantize_nvfp4', 'dequa
+ntize_per_tensor_fp8', 'quantize_nvfp4', 'quantize_per_tensor_fp8', 'scaled_mm_nvfp4']}
+2026-02-09 16:12:40 - INFO - Found comfy_kitchen backend triton: {'available': True, 'disabled': True, 'unavailable_reason': None, 'capabilities': ['apply_rope', 'apply_rope1', 'dequantize_nvfp4', 'deq
+uantize_per_tensor_fp8', 'quantize_nvfp4', 'quantize_per_tensor_fp8']}
+2026-02-09 16:12:40 - INFO - Using pytorch attention
+2026-02-09 16:12:41 - INFO - Python version: 3.11.14 (main, Oct 21 2025, 18:31:21) [GCC 11.2.0]
+2026-02-09 16:12:41 - INFO - ComfyUI version: 0.8.2
+2026-02-09 16:12:41 - INFO - ComfyUI frontend version: 1.35.9
+2026-02-09 16:12:41 - INFO - [Prompt Server] web root: /root/miniconda3/envs/py311/lib/python3.11/site-packages/comfyui_frontend_package/static
+2026-02-09 16:12:41 - INFO - Total VRAM 32112 MB, total RAM 515630 MB
+2026-02-09 16:12:41 - INFO - pytorch version: 2.8.0+cu128
+2026-02-09 16:12:41 - INFO - Set vram state to: NORMAL_VRAM
+2026-02-09 16:12:41 - INFO - Device: cuda:0 NVIDIA GeForce RTX 5090 : cudaMallocAsync
+2026-02-09 16:12:41 - INFO - Using async weight offloading with 2 streams
+2026-02-09 16:12:41 - INFO - Enabled pinned memory 489848.0
+(pysssss:WD14Tagger) [DEBUG] Available ORT providers: TensorrtExecutionProvider, CUDAExecutionProvider, CPUExecutionProvider
+(pysssss:WD14Tagger) [DEBUG] Using ORT providers: CUDAExecutionProvider, CPUExecutionProvider
+2026-02-09 16:12:42 - INFO - ======================================== ComfyUI-QwenImageLoraLoader Initialization ========================================
+[DEBUG] Added to sys.path: /root/ComfyUI/custom_nodes/ComfyUI-QwenImageLoraLoader
+[DEBUG] wrappers dir exists: True
+[DEBUG] qwenimage.py exists: True
+2026-02-09 16:12:42 - INFO - ✅ ControlNet node loaded successfully
+2026-02-09 16:12:42 - INFO - ============================================================================================================================
+Efficiency Nodes Warning: Failed to import python package 'simpleeval'; related nodes disabled.
+
+[ComfyUI-Easy-Use] server: v1.3.4 Loaded
+[ComfyUI-Easy-Use] web root: /root/ComfyUI/custom_nodes/comfyui-easy-use/web_version/v2 Loaded
+[AnimateDiffEvo] - ERROR - No motion models found. Please download one and place in: ['/root/ComfyUI/custom_nodes/ComfyUIAnimateDiffEvolved/models', '/root/ComfyUI/models/animatediff_models']
+2026-02-09 16:12:43 - INFO - ### Loading: ComfyUI-ZVNodes (V0.0.1)
+### Loading: ComfyUI-Impact-Pack (V8.17.1)
+[Impact Pack] Wildcards loading done.
+2026-02-09 16:12:45 - INFO - ### Loading: ComfyUI-Inspire-Pack (V1.20)
+[/root/ComfyUI/custom_nodes/comfyuicontrolnetaux] | INFO -> Using ckpts path: /root/ComfyUI/custom_nodes/comfyuicontrolnetaux/ckpts
+[/root/ComfyUI/custom_nodes/comfyuicontrolnetaux] | INFO -> Using symlinks: False
+[/root/ComfyUI/custom_nodes/comfyuicontrolnetaux] | INFO -> Using ort providers: ['CUDAExecutionProvider', 'DirectMLExecutionProvider', 'OpenVINOExecutionProvider', 'ROCMExecutionProvider', 'CPUExecuti
+onProvider', 'CoreMLExecutionProvider']
+DWPose: Onnxruntime with acceleration providers detected
+------------------------------------------
+Comfyroll Studio v1.76 :  175 Nodes Loaded
+------------------------------------------
+** For changes, please see patch notes at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/blob/main/Patch_Notes.md
+** For help, please see the wiki at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki
+------------------------------------------
+[Crystools INFO] Crystools version: 1.27.4
+[Crystools INFO] Platform release: 5.15.0-94-generic
+[Crystools INFO] JETSON: Not detected.
+[Crystools INFO] CPU: INTEL(R) XEON(R) GOLD 6530 - Arch: x86_64 - OS: Linux 5.15.0-94-generic
+[Crystools INFO] pynvml (NVIDIA) initialized.
+[Crystools INFO] GPU/s:
+[Crystools INFO] 0) NVIDIA GeForce RTX 5090
+[Crystools INFO] NVIDIA Driver: 590.44.01
+[MultiGPU] Patching mm.get_torch_device and mm.text_encoder_device
+[MultiGPU] Initiating custom_node Registration. . .
+-----------------------------------------------
+custom_node                   Found     Nodes
+-----------------------------------------------
+ComfyUI-LTXVideo                  Y         1
+ComfyUI-Florence2                 Y         2
+ComfyUI_bitsandbytes_NF4          N         0
+x-flux-comfyui                    N         0
+ComfyUI-MMAudio                   N         0
+ComfyUI-GGUF                      N         0
+PuLID_ComfyUI                     N         0
+ComfyUI-HunyuanVideoWrapper       N         0
+ComfyUI-WanVideoWrapper           Y         8
+-----------------------------------------------
+[MultiGPU] Registration complete. Final mappings: DeviceSelectorMultiGPU, HunyuanVideoEmbeddingsAdapter, UNETLoaderMultiGPU, VAELoaderMultiGPU, CLIPLoaderMultiGPU, DualCLIPLoaderMultiGPU, TripleCLIPLoa
+derMultiGPU, QuadrupleCLIPLoaderMultiGPU, CLIPVisionLoaderMultiGPU, CheckpointLoaderSimpleMultiGPU, ControlNetLoaderMultiGPU, DiffusersLoaderMultiGPU, DiffControlNetLoaderMultiGPU, UNETLoaderDisTorch2M
+ultiGPU, VAELoaderDisTorch2MultiGPU, CLIPLoaderDisTorch2MultiGPU, DualCLIPLoaderDisTorch2MultiGPU, TripleCLIPLoaderDisTorch2MultiGPU, QuadrupleCLIPLoaderDisTorch2MultiGPU, CLIPVisionLoaderDisTorch2Mult
+iGPU, CheckpointLoaderSimpleDisTorch2MultiGPU, ControlNetLoaderDisTorch2MultiGPU, DiffusersLoaderDisTorch2MultiGPU, DiffControlNetLoaderDisTorch2MultiGPU, LTXVLoaderMultiGPU, Florence2ModelLoaderMultiG
+PU, DownloadAndLoadFlorence2ModelMultiGPU, WanVideoModelLoaderMultiGPU, WanVideoModelLoaderMultiGPU_2, WanVideoVAELoaderMultiGPU, LoadWanVideoT5TextEncoderMultiGPU, LoadWanVideoClipTextEncoderMultiGPU,
+ WanVideoTextEncodeMultiGPU, WanVideoBlockSwapMultiGPU, WanVideoSamplerMultiGPU
+2026-02-09 16:12:45 - INFO - ### Loading: ComfyUI-Impact-Subpack (V1.3.3)
+2026-02-09 16:12:45 - INFO - [Impact Pack/Subpack] Using folder_paths to determine whitelist path: /root/ComfyUI/user/default/ComfyUI-Impact-Subpack/model-whitelist.txt
+2026-02-09 16:12:45 - INFO - [Impact Pack/Subpack] Ensured whitelist directory exists: /root/ComfyUI/user/default/ComfyUI-Impact-Subpack
+2026-02-09 16:12:45 - INFO - [Impact Pack/Subpack] Loaded 0 model(s) from whitelist: /root/ComfyUI/user/default/ComfyUI-Impact-Subpack/model-whitelist.txt
+2026-02-09 16:12:47 - INFO - [Impact Subpack] ultralytics_bbox: /root/ComfyUI/models/ultralytics/bbox
+2026-02-09 16:12:47 - INFO - [Impact Subpack] ultralytics_segm: /root/ComfyUI/models/ultralytics/segm
+2026-02-09 16:12:47 - WARNING - Traceback (most recent call last):
+  File "/root/ComfyUI/nodes.py", line 2155, in load_custom_node
+    module_spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/root/ComfyUI/custom_nodes/ComfyUITeaCache/__init__.py", line 1, in <module>
+    from .nodes import NODE_CLASS_MAPPINGS as NODES_CLASS, NODE_DISPLAY_NAME_MAPPINGS as NODES_DISPLAY
+  File "/root/ComfyUI/custom_nodes/ComfyUITeaCache/nodes.py", line 12, in <module>
+    from comfy.ldm.lightricks.model import precompute_freqs_cis
+ImportError: cannot import name 'precompute_freqs_cis' from 'comfy.ldm.lightricks.model' (/root/ComfyUI/comfy/ldm/lightricks/model.py)
+
+2026-02-09 16:12:47 - WARNING - Cannot import /root/ComfyUI/custom_nodes/ComfyUITeaCache module for custom nodes: cannot import name 'precompute_freqs_cis' from 'comfy.ldm.lightricks.model' (/root/Comf
+yUI/comfy/ldm/lightricks/model.py)
+# 😺dzNodes: LayerStyle -> Cannot import name 'guidedFilter' from 'cv2.ximgproc'
+A few nodes cannot works properly, while most nodes are not affected. Please REINSTALL package 'opencv-contrib-python'.
+For detail refer to https://github.com/chflame163/ComfyUI_LayerStyle/issues/5
+WAS Node Suite: OpenCV Python FFMPEG support is enabled
+WAS Node Suite Warning: `ffmpeg_bin_path` is not set in `/root/ComfyUI/custom_nodes/wasnodesuitecomfyui/was_suite_config.json` config file. Will attempt to use system ffmpeg binaries if available.
+WAS Node Suite: Finished. Loaded 220 nodes successfully.
+
+        "Art is the magic that brings beauty into the world." - Unknown
+
+2026-02-09 16:12:49 - INFO - ### Loading: ComfyUI-Manager (V3.37.2)
+2026-02-09 16:12:49 - INFO - [ComfyUI-Manager] network_mode: public
+2026-02-09 16:12:49 - INFO - ### ComfyUI Version: v0.8.2-2-gcb8dd972 | Released on '2026-02-09'
+
+[rgthree-comfy] Loaded 48 fantastic nodes. 🎉
+
+Unable to import DatasetWordcloud. This node will not be available.
+Unable to import PanavisionLensV1. This node will not be available.
+/root/miniconda3/envs/py311/lib/python3.11/site-packages/pydub/utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+Unable to import NoiseFactory. This node will not be available.
+Unable to import NoiseFactoryV2. This node will not be available.
+Unable to import NoiseFactoryV3. This node will not be available.
+Unable to import VideoNoiseFactory. This node will not be available.
+Unable to import GSL_Filter_V1. This node will not be available.
+Unable to import ProjectFolderPathNode. This node will not be available.
+Unable to import Zenkai_IMPv1. This node will not be available.
+Unable to import ZenkaiControlPromptV1. This node will not be available.
+2026-02-09 16:12:50 - INFO - [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/github-stats.json
+2026-02-09 16:12:50 - INFO - [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+2026-02-09 16:12:50 - INFO - [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+2026-02-09 16:12:50 - INFO - [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+2026-02-09 16:12:50 - INFO - [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+⚠️  SeedVR2 optimizations check: Flash Attention ❌ | Triton ✅
+💡 Install Flash Attention for faster inference: pip install flash-attn
+📊 Initial CUDA memory: 30.86GB free / 31.36GB total
+2026-02-09 16:12:50 - INFO - ======================================== ComfyUI-nunchaku Initialization ========================================
+2026-02-09 16:12:50 - INFO - Nunchaku version: 1.0.1
+2026-02-09 16:12:50 - INFO - ComfyUI-nunchaku version: 1.0.1
+2026-02-09 16:12:50 - WARNING - ComfyUI-nunchaku 1.0.1 is not compatible with nunchaku 1.0.1. Please update nunchaku to a supported version in ['v1.0.0'].
+'nunchaku_versions.json' not found. Node will start in minimal mode.
+2026-02-09 16:12:51 - INFO - =================================================================================================================
+2026-02-09 16:12:51 - INFO -
+Import times for custom nodes:
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/websocket_image_save.py
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/xddNode-ComfyUI
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/ComfyUI-PainterI2VforKJ
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/ComfyUI_AdvancedRefluxControl
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/ComfyUI-DD-Translation
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/comfyui-zhipu
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/comfyui-logic
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/ComfyUI-PainterI2Vadvanced
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/sddynamicthresholding
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/Comfyui_Redux_Advanced
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/comfyui-florence2
+2026-02-09 16:12:51 - INFO -    0.0 seconds (IMPORT FAILED): /root/ComfyUI/custom_nodes/ComfyUITeaCache
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/qweneditutils
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/ComfyUI-VFI
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/ComfyUI-SoundFlow
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/ComfyUI-WD14-Tagger
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/comfyui-basic-math
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/ComfyUI-QwenImageLoraLoader
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/audio-separation-nodes-comfyui
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/comfyui-textonsegs
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/comfyui-custom-scripts
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/ComfyMath
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/ComfyUIlayerdiffuse
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/ComfyUIessentials
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/comfyui-various
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/comfyui-frame-interpolation
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/ComfyUIUltimateSDUpscale
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/ComfyUIVideoHelperSuite
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/comfyui-multigpu
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/efficiencynodescomfyui
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/ComfyUIAdvancedControlNet
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/rgthree-comfy
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/ComfyUI-KJNodes
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/ComfyUI_Comfyroll_CustomNodes
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/ComfyUIIPAdapterplus
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/kaytool
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/comfyuicontrolnetaux
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/ComfyUIAnimateDiffEvolved
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/ComfyUI-LTXVideo
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/ComfyUIImpactPack
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/djz-nodes
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/ComfyUIInspirePack
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/ComfyUI-SeedVR2_VideoUpscaler
+2026-02-09 16:12:51 - INFO -    0.0 seconds: /root/ComfyUI/custom_nodes/ComfyUI-Manager
+2026-02-09 16:12:51 - INFO -    0.1 seconds: /root/ComfyUI/custom_nodes/ComfyUI-WanVideoWrapper
+2026-02-09 16:12:51 - INFO -    0.1 seconds: /root/ComfyUI/custom_nodes/comfyui-logicutils
+2026-02-09 16:12:51 - INFO -    0.1 seconds: /root/ComfyUI/custom_nodes/ComfyUI-nunchaku
+2026-02-09 16:12:51 - INFO -    0.1 seconds: /root/ComfyUI/custom_nodes/ComfyUI-Crystools
+2026-02-09 16:12:51 - INFO -    0.5 seconds: /root/ComfyUI/custom_nodes/ComfyUI-ZVNodes
+2026-02-09 16:12:51 - INFO -    0.5 seconds: /root/ComfyUI/custom_nodes/wasnodesuitecomfyui
+2026-02-09 16:12:51 - INFO -    0.9 seconds: /root/ComfyUI/custom_nodes/indextts-mw
+2026-02-09 16:12:51 - INFO -    1.2 seconds: /root/ComfyUI/custom_nodes/ComfyUIInspyrenetRembg
+2026-02-09 16:12:51 - INFO -    1.3 seconds: /root/ComfyUI/custom_nodes/comfyui-easy-use
+2026-02-09 16:12:51 - INFO -    1.7 seconds: /root/ComfyUI/custom_nodes/ComfyUI_LayerStyle_Advance
+2026-02-09 16:12:51 - INFO -    2.0 seconds: /root/ComfyUI/custom_nodes/ComfyUIImpactSubpack
+2026-02-09 16:12:51 - INFO -
+2026-02-09 16:12:51 - INFO - Context impl SQLiteImpl.
+2026-02-09 16:12:51 - INFO - Will assume non-transactional DDL.
+2026-02-09 16:12:51 - WARNING - No target revision found.
+2026-02-09 16:12:51 - INFO - Starting server
+
+2026-02-09 16:12:51 - INFO - To see the GUI go to: http://0.0.0.0:5090
+FETCH ComfyRegistry Data: 5/124
+FETCH ComfyRegistry Data: 10/124
+FETCH ComfyRegistry Data: 15/124
+FETCH ComfyRegistry Data: 20/124
+FETCH ComfyRegistry Data: 25/124
+FETCH ComfyRegistry Data: 30/124
+FETCH ComfyRegistry Data: 35/124
+FETCH ComfyRegistry Data: 40/124
+FETCH ComfyRegistry Data: 45/124
+FETCH ComfyRegistry Data: 50/124
+FETCH ComfyRegistry Data: 55/124
+FETCH ComfyRegistry Data: 60/124
+FETCH ComfyRegistry Data: 65/124
+FETCH ComfyRegistry Data: 70/124
+FETCH ComfyRegistry Data: 75/124
+FETCH ComfyRegistry Data: 80/124
+FETCH ComfyRegistry Data: 85/124
+FETCH ComfyRegistry Data: 90/124
+FETCH ComfyRegistry Data: 95/124
+FETCH ComfyRegistry Data: 100/124
+FETCH ComfyRegistry Data: 105/124
+FETCH ComfyRegistry Data: 110/124
+FETCH ComfyRegistry Data: 115/124
+FETCH ComfyRegistry Data: 120/124
+FETCH ComfyRegistry Data [DONE]
+2026-02-09 16:15:26 - INFO - [ComfyUI-Manager] default cache updated: https://api.comfy.org/nodes
+FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json [DONE]
+2026-02-09 16:15:27 - INFO - [ComfyUI-Manager] All startup tasks have been completed.
+2026-02-09 16:18:18 - INFO - got prompt
+2026-02-09 16:18:18 - INFO - Using pytorch attention in VAE
+2026-02-09 16:18:18 - INFO - Using pytorch attention in VAE
+2026-02-09 16:18:18 - INFO - VAE load device: cuda:0, offload device: cpu, dtype: torch.bfloat16
+2026-02-09 16:18:19 - INFO - CLIP/text encoder model load device: cuda:0, offload device: cpu, current: cpu, dtype: torch.float16
+2026-02-09 16:18:20 - INFO - Requested to load WanTEModel
+2026-02-09 16:18:21 - INFO - loaded completely; 30315.11 MB usable, 10835.48 MB loaded, full load: True
+2026-02-09 16:18:22 - INFO - Requested to load WanVAE
+2026-02-09 16:18:22 - INFO - loaded completely; 9587.96 MB usable, 242.03 MB loaded, full load: True
+2026-02-09 16:18:26 - INFO - Found quantization metadata version 1
+2026-02-09 16:18:26 - INFO - Detected mixed precision quantization
+2026-02-09 16:18:26 - INFO - Using mixed precision operations
+2026-02-09 16:18:26 - INFO - model weight dtype torch.float8_e4m3fn, manual cast: torch.float16
+2026-02-09 16:18:26 - INFO - model_type FLOW
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.0.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.0.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.0.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.0.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.0.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.0.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.0.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.1.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.1.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.1.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.1.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.1.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.1.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.1.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.10.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.10.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.10.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.10.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.10.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.10.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.10.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.11.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.11.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.11.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.11.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.11.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.11.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.11.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.12.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.12.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.12.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.12.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.12.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.12.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.12.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.13.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.13.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.13.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.13.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.13.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.13.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.13.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.14.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.14.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.14.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.14.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.14.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.14.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.14.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.15.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.15.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.15.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.15.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.15.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.15.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.15.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.16.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.16.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.16.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.16.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.16.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.16.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.16.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.17.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.17.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.17.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.17.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.17.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.17.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.17.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.18.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.18.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.18.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.18.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.18.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.18.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.18.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.19.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.19.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.19.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.19.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.19.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.19.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.19.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.2.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.2.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.2.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.2.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.2.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.2.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.2.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.20.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.20.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.20.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.20.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.20.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.20.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.20.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.21.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.21.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.21.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.21.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.21.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.21.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.21.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.22.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.22.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.22.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.22.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.22.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.22.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.22.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.23.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.23.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.23.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.23.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.23.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.23.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.23.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.24.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.24.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.24.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.24.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.24.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.24.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.24.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.25.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.25.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.25.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.25.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.25.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.25.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.25.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.26.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.26.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.26.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.26.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.26.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.26.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.26.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.27.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.27.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.27.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.27.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.27.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.27.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.27.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.28.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.28.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.28.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.28.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.28.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.28.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.28.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.29.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.29.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.29.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.29.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.29.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.29.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.29.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.3.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.3.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.3.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.3.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.3.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.3.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.3.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.30.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.30.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.30.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.30.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.30.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.30.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.30.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.31.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.31.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.31.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.31.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.31.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.31.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.31.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.32.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.32.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.32.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.32.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.32.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.32.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.32.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.33.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.33.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.33.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.33.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.33.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.33.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.33.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.34.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.34.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.34.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.34.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.34.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.34.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.34.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.35.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.35.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.35.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.35.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.35.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.35.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.35.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.36.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.36.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.36.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.36.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.36.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.36.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.36.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.37.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.37.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.37.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.37.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.37.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.37.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.37.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.38.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.38.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.38.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.38.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.38.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.38.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.38.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.39.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.39.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.39.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.39.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.39.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.39.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.39.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.4.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.4.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.4.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.4.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.4.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.4.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.4.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.5.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.5.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.5.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.5.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.5.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.5.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.5.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.6.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.6.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.6.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.6.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.6.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.6.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.6.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.7.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.7.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.7.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.7.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.7.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.7.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.7.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.8.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.8.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.8.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.8.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.8.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.8.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.8.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.9.cross_attn.k_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.9.cross_attn.k_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.9.cross_attn.k_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.9.cross_attn.norm_k_img.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.9.cross_attn.v_img.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.9.cross_attn.v_img.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.blocks.9.cross_attn.v_img.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.img_emb.proj.0.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.img_emb.proj.0.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.img_emb.proj.1.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.img_emb.proj.1.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.img_emb.proj.1.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.img_emb.proj.3.diff_b
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.img_emb.proj.3.lora_down.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.img_emb.proj.3.lora_up.weight
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.img_emb.proj.4.diff
+2026-02-09 16:18:27 - WARNING - lora key not loaded: diffusion_model.img_emb.proj.4.diff_b
+2026-02-09 16:18:27 - INFO - Requested to load WAN21
+2026-02-09 16:18:37 - INFO - loaded completely; 17024.33 MB usable, 13851.82 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:29<00:00, 14.66s/it]
+Restoring initial comfy attention
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = False
+2026-02-09 16:19:11 - INFO - Found quantization metadata version 1
+2026-02-09 16:19:11 - INFO - Detected mixed precision quantization
+2026-02-09 16:19:11 - INFO - Using mixed precision operations
+2026-02-09 16:19:11 - INFO - model weight dtype torch.float16, manual cast: torch.float16
+2026-02-09 16:19:11 - INFO - model_type FLOW
+2026-02-09 16:19:11 - INFO - Requested to load WAN21
+2026-02-09 16:19:18 - INFO - loaded completely; 17022.33 MB usable, 13852.99 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+ 25%|█████████████████████████████████████████▌                                                                                                                            | 1/4 [00:12<00:37, 12.65s/it]
+2026-02-09 16:19:38 - INFO - got prompt
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [01:02<00:00, 15.58s/it]
+Restoring initial comfy attention
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = False
+2026-02-09 16:20:24 - INFO - Requested to load WanVAE
+2026-02-09 16:20:25 - INFO - loaded completely; 4798.29 MB usable, 242.03 MB loaded, full load: True
+2026-02-09 16:20:39 - INFO - Prompt executed in 140.96 seconds
+2026-02-09 16:20:39 - INFO - Requested to load WanTEModel
+2026-02-09 16:20:43 - INFO - loaded completely; 30139.11 MB usable, 10835.48 MB loaded, full load: True
+2026-02-09 16:20:43 - INFO - Requested to load WanVAE
+2026-02-09 16:20:43 - INFO - loaded completely; 9575.96 MB usable, 242.03 MB loaded, full load: True
+2026-02-09 16:20:48 - INFO - Requested to load WAN21
+2026-02-09 16:20:56 - INFO - loaded completely; 17022.33 MB usable, 13851.82 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:29<00:00, 14.74s/it]
+Restoring initial comfy attention
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = False
+2026-02-09 16:21:30 - INFO - Requested to load WAN21
+2026-02-09 16:21:35 - INFO - loaded completely; 17022.33 MB usable, 13852.99 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [01:02<00:00, 15.65s/it]
+2026-02-09 16:22:38 - INFO - got prompt
+Restoring initial comfy attention
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = False
+2026-02-09 16:22:42 - INFO - Requested to load WanVAE
+2026-02-09 16:22:42 - INFO - loaded completely; 4798.29 MB usable, 242.03 MB loaded, full load: True
+2026-02-09 16:22:54 - INFO - Prompt executed in 135.53 seconds
+2026-02-09 16:22:55 - INFO - Requested to load WanTEModel
+2026-02-09 16:22:59 - INFO - loaded completely; 30139.11 MB usable, 10835.48 MB loaded, full load: True
+2026-02-09 16:22:59 - INFO - Requested to load WanVAE
+2026-02-09 16:22:59 - INFO - loaded completely; 9575.96 MB usable, 242.03 MB loaded, full load: True
+2026-02-09 16:23:04 - INFO - Requested to load WAN21
+2026-02-09 16:23:12 - INFO - loaded completely; 17022.33 MB usable, 13851.82 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:29<00:00, 14.76s/it]
+Restoring initial comfy attention
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = False
+2026-02-09 16:23:46 - INFO - Requested to load WAN21
+2026-02-09 16:23:50 - INFO - loaded completely; 17022.33 MB usable, 13852.99 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [01:02<00:00, 15.67s/it]
+Restoring initial comfy attention
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = False
+2026-02-09 16:24:56 - INFO - Requested to load WanVAE
+2026-02-09 16:24:57 - INFO - loaded completely; 4798.29 MB usable, 242.03 MB loaded, full load: True
+2026-02-09 16:25:09 - INFO - Prompt executed in 134.49 seconds
+2026-02-09 16:25:12 - INFO - got prompt
+2026-02-09 16:25:12 - INFO - Requested to load WanTEModel
+2026-02-09 16:25:16 - INFO - loaded completely; 30139.11 MB usable, 10835.48 MB loaded, full load: True
+2026-02-09 16:25:16 - INFO - Requested to load WanVAE
+2026-02-09 16:25:16 - INFO - loaded completely; 9575.96 MB usable, 242.03 MB loaded, full load: True
+2026-02-09 16:25:21 - INFO - Requested to load WAN21
+2026-02-09 16:25:29 - INFO - loaded completely; 17022.33 MB usable, 13851.82 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+ 50%|███████████████████████████████████████████████████████████████████████████████████                                                                                   | 1/2 [00:12<00:12, 12.89s/it]
+2026-02-09 16:25:47 - INFO - got prompt
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:29<00:00, 14.77s/it]
+Restoring initial comfy attention
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = False
+2026-02-09 16:26:03 - INFO - Requested to load WAN21
+2026-02-09 16:26:06 - INFO - loaded completely; 17022.33 MB usable, 13852.99 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [01:02<00:00, 15.71s/it]
+Restoring initial comfy attention
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = False
+2026-02-09 16:27:13 - INFO - Requested to load WanVAE
+2026-02-09 16:27:13 - INFO - loaded completely; 4798.29 MB usable, 242.03 MB loaded, full load: True
+2026-02-09 16:27:26 - INFO - Prompt executed in 134.31 seconds
+2026-02-09 16:27:27 - INFO - Requested to load WanTEModel
+2026-02-09 16:27:29 - INFO - got prompt
+2026-02-09 16:27:30 - INFO - loaded completely; 30139.11 MB usable, 10835.48 MB loaded, full load: True
+2026-02-09 16:27:31 - INFO - Requested to load WanVAE
+2026-02-09 16:27:31 - INFO - loaded completely; 9575.96 MB usable, 242.03 MB loaded, full load: True
+2026-02-09 16:27:35 - INFO - Requested to load WAN21
+2026-02-09 16:27:44 - INFO - loaded completely; 17022.33 MB usable, 13851.82 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:29<00:00, 14.83s/it]
+Restoring initial comfy attention
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = False
+2026-02-09 16:28:17 - INFO - Requested to load WAN21
+2026-02-09 16:28:21 - INFO - loaded completely; 17022.33 MB usable, 13852.99 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [01:03<00:00, 15.76s/it]
+Restoring initial comfy attention
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = False
+2026-02-09 16:29:28 - INFO - Requested to load WanVAE
+2026-02-09 16:29:28 - INFO - loaded completely; 4798.29 MB usable, 242.03 MB loaded, full load: True
+2026-02-09 16:29:41 - INFO - Prompt executed in 134.93 seconds
+2026-02-09 16:29:42 - INFO - Requested to load WanTEModel
+2026-02-09 16:29:46 - INFO - loaded completely; 30139.11 MB usable, 10835.48 MB loaded, full load: True
+2026-02-09 16:29:46 - INFO - Requested to load WanVAE
+2026-02-09 16:29:46 - INFO - loaded completely; 9575.96 MB usable, 242.03 MB loaded, full load: True
+2026-02-09 16:29:51 - INFO - Requested to load WAN21
+2026-02-09 16:29:59 - INFO - loaded completely; 17022.33 MB usable, 13851.82 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:29<00:00, 14.83s/it]
+Restoring initial comfy attention
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = False
+2026-02-09 16:30:33 - INFO - Requested to load WAN21
+2026-02-09 16:30:37 - INFO - loaded completely; 17022.33 MB usable, 13852.99 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [01:03<00:00, 15.76s/it]
+Restoring initial comfy attention
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = False
+2026-02-09 16:31:44 - INFO - Requested to load WanVAE
+2026-02-09 16:31:44 - INFO - loaded completely; 4798.29 MB usable, 242.03 MB loaded, full load: True
+2026-02-09 16:31:58 - INFO - Prompt executed in 136.24 seconds
+2026-02-09 16:35:50 - INFO - got prompt
+2026-02-09 16:35:50 - INFO - Requested to load WanTEModel
+2026-02-09 16:35:54 - INFO - loaded completely; 30139.11 MB usable, 10835.48 MB loaded, full load: True
+2026-02-09 16:35:55 - INFO - Requested to load WanVAE
+2026-02-09 16:35:55 - INFO - loaded completely; 9575.96 MB usable, 242.03 MB loaded, full load: True
+2026-02-09 16:35:59 - INFO - Requested to load WAN21
+2026-02-09 16:36:09 - INFO - loaded completely; 17022.33 MB usable, 13851.82 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:29<00:00, 14.65s/it]
+Restoring initial comfy attention
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = False
+2026-02-09 16:36:42 - INFO - Requested to load WAN21
+2026-02-09 16:36:48 - INFO - loaded completely; 17022.33 MB usable, 13852.99 MB loaded, full load: True
+Patching comfy attention to use sageattn
+Patching torch settings: torch.backends.cuda.matmul.allow_fp16_accumulation = True
+ 50%|███████████████████████████████████████████████████████████████████████████████████                                                                                   | 2/4 [00:29<00:30, 15.00s/it]
+2026-02-09 16:37:33 - INFO - got prompt
+ 75%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                         | 3/4 [00:45<00:15, 15.76s/it]

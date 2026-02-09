@@ -652,7 +652,14 @@ def load_models_gpu(models, memory_required=0, force_patch_weights=False, minimu
             models_to_load.append(loaded)
         else:
             if hasattr(x, "model"):
-                logging.info(f"Requested to load {x.model.__class__.__name__}")
+                name = x.model.__class__.__name__
+                path_info = ""
+                if getattr(x, "model_path", None) or getattr(x, "model_name", None):
+                    path_info = " (path: {}, name: {})".format(
+                        getattr(x, "model_path", None) or "N/A",
+                        getattr(x, "model_name", None) or "N/A"
+                    )
+                logging.info("Requested to load {}{}".format(name, path_info))
             models_to_load.append(loaded_model)
 
     for loaded_model in models_to_load:

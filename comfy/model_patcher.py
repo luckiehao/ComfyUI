@@ -269,6 +269,10 @@ class ModelPatcher:
         if not hasattr(self.model, 'model_offload_buffer_memory'):
             self.model.model_offload_buffer_memory = 0
 
+        # Optional: set by loaders for logging (path and display name of the loaded file)
+        self.model_path = None
+        self.model_name = None
+
     def model_size(self):
         if self.size > 0:
             return self.size
@@ -300,6 +304,8 @@ class ModelPatcher:
         n.pinned = self.pinned
 
         n.force_cast_weights = self.force_cast_weights
+        n.model_path = self.model_path
+        n.model_name = self.model_name
 
         # attachments
         n.attachments = {}
@@ -792,11 +798,17 @@ class ModelPatcher:
                     self.pin_weight_to_device("{}.{}".format(n, param))
 
             usable_stat = "{:.2f} MB usable,".format(lowvram_model_memory / (1024 * 1024)) if lowvram_model_memory < 1e32 else ""
+            path_info = ""
+            if self.model_path is not None or self.model_name is not None:
+                path_info = " (path: {}, name: {})".format(
+                    self.model_path if self.model_path else "N/A",
+                    self.model_name if self.model_name else "N/A"
+                )
             if lowvram_counter > 0:
-                logging.info("loaded partially; {} {:.2f} MB loaded, {:.2f} MB offloaded, {:.2f} MB buffer reserved, lowvram patches: {}".format(usable_stat, mem_counter / (1024 * 1024), lowvram_mem_counter / (1024 * 1024), offload_buffer / (1024 * 1024), patch_counter))
+                logging.info("loaded partially; {} {:.2f} MB loaded, {:.2f} MB offloaded, {:.2f} MB buffer reserved, lowvram patches: {}{}".format(usable_stat, mem_counter / (1024 * 1024), lowvram_mem_counter / (1024 * 1024), offload_buffer / (1024 * 1024), patch_counter, path_info))
                 self.model.model_lowvram = True
             else:
-                logging.info("loaded completely; {} {:.2f} MB loaded, full load: {}".format(usable_stat, mem_counter / (1024 * 1024), full_load))
+                logging.info("loaded completely; {} {:.2f} MB loaded, full load: {}{}".format(usable_stat, mem_counter / (1024 * 1024), full_load, path_info))
                 self.model.model_lowvram = False
                 if full_load:
                     self.model.to(device_to)

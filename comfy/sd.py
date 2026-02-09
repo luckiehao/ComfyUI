@@ -1315,7 +1315,10 @@ def load_gligen(ckpt_path):
     model = gligen.load_gligen(data)
     if model_management.should_use_fp16():
         model = model.half()
-    return comfy.model_patcher.ModelPatcher(model, load_device=model_management.get_torch_device(), offload_device=model_management.unet_offload_device())
+    patcher = comfy.model_patcher.ModelPatcher(model, load_device=model_management.get_torch_device(), offload_device=model_management.unet_offload_device())
+    patcher.model_path = ckpt_path
+    patcher.model_name = os.path.basename(ckpt_path)
+    return patcher
 
 def model_detection_error_hint(path, state_dict):
     filename = os.path.basename(path)
@@ -1447,6 +1450,8 @@ def load_state_dict_guess_config(sd, output_vae=True, output_clip=True, output_c
 
     if output_model:
         model_patcher = comfy.model_patcher.ModelPatcher(model, load_device=load_device, offload_device=model_management.unet_offload_device())
+        model_patcher.model_path = ckpt_path
+        model_patcher.model_name = os.path.basename(ckpt_path)
         if inital_load_device != torch.device("cpu"):
             logging.info("loaded diffusion model directly to GPU")
             model_management.load_models_gpu([model_patcher], force_full_load=True)
@@ -1552,6 +1557,8 @@ def load_diffusion_model(unet_path, model_options={}):
     if model is None:
         logging.error("ERROR UNSUPPORTED DIFFUSION MODEL {}".format(unet_path))
         raise RuntimeError("ERROR: Could not detect model type of: {}\n{}".format(unet_path, model_detection_error_hint(unet_path, sd)))
+    model.model_path = unet_path
+    model.model_name = os.path.basename(unet_path)
     return model
 
 def load_unet(unet_path, dtype=None):
