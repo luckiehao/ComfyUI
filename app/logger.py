@@ -51,7 +51,7 @@ def on_flush(callback):
     if stderr_interceptor is not None:
         stderr_interceptor.on_flush(callback)
 
-def setup_logger(log_level: str = 'INFO', capacity: int = 300, use_stdout: bool = False):
+def setup_logger(log_level: str = 'INFO', capacity: int = 300, use_stdout: bool = False, log_timestamp: bool = False):
     global logs
     if logs:
         return
@@ -68,8 +68,15 @@ def setup_logger(log_level: str = 'INFO', capacity: int = 300, use_stdout: bool 
     logger = logging.getLogger()
     logger.setLevel(log_level)
 
+    if log_timestamp:
+        log_fmt = "%(asctime)s - %(levelname)s - %(message)s"
+        date_fmt = "%Y-%m-%d %H:%M:%S"
+        formatter = logging.Formatter(log_fmt, datefmt=date_fmt)
+    else:
+        formatter = logging.Formatter("%(message)s")
+
     stream_handler = logging.StreamHandler()
-    stream_handler.setFormatter(logging.Formatter("%(message)s"))
+    stream_handler.setFormatter(formatter)
 
     if use_stdout:
         # Only errors and critical to stderr
@@ -77,7 +84,7 @@ def setup_logger(log_level: str = 'INFO', capacity: int = 300, use_stdout: bool 
 
         # Lesser to stdout
         stdout_handler = logging.StreamHandler(sys.stdout)
-        stdout_handler.setFormatter(logging.Formatter("%(message)s"))
+        stdout_handler.setFormatter(formatter)
         stdout_handler.addFilter(lambda record: record.levelno < logging.ERROR)
         logger.addHandler(stdout_handler)
 

@@ -180,6 +180,7 @@ parser.add_argument("--multi-user", action="store_true", help="Enables per-user 
 
 parser.add_argument("--verbose", default='INFO', const='DEBUG', nargs="?", choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'], help='Set the logging level')
 parser.add_argument("--log-stdout", action="store_true", help="Send normal process output to stdout instead of stderr (default).")
+parser.add_argument("--log-timestamp", action="store_true", help="在日志输出前添加时间戳，便于排查性能瓶颈 (Add timestamp to each log line for debugging).")
 
 
 # The default built-in provider hosted under web/
